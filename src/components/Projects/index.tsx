@@ -1,15 +1,31 @@
 import { useState } from 'react'
 import Slider from 'react-slick'
 import { SocialMedia } from '../SocialMedia'
-import { ProjectsAndLinks } from './style'
+import { ProjectsAndLinks } from './styles'
 import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.png'
 import projectAnimesOnline from '../../assets/projectAnimesOnline.png'
 
+import { useTranslation } from 'react-i18next'
+
 export function Projects() {
+  const { t } = useTranslation()
+
   let slides = [
     <img src="https://picsum.photos/800/300/?random" alt="1" />,
-    <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />,
-    <img src={projectAnimesOnline} alt={projectAnimesOnline} />,
+    <a
+      href="https://quartodoyoga.vercel.app/home"
+      target="_blank"
+      title="Quarto do Yoga"
+    >
+      <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
+    </a>,
+    <a
+      href="https://animesOnline.vercel.app"
+      target="_blank"
+      title="Animes online"
+    >
+      <img src={projectAnimesOnline} alt={projectAnimesOnline} />
+    </a>,
     <img src="https://picsum.photos/800/301/?random" alt="2" />,
     <img src="https://picsum.photos/800/302/?random" alt="3" />,
   ]
@@ -28,10 +44,10 @@ export function Projects() {
 
   return (
     <ProjectsAndLinks>
-      <h1>Projetos desenvolvidos</h1>
+      <h1>{t('Projetos desenvolvidos')}</h1>
       <Slider {...settings} lazyLoad="progressive">
         {slides.map((img, idx) => (
-          <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
+          <div key={idx} className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
             {img}
           </div>
         ))}

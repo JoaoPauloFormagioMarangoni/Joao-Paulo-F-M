@@ -2,8 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --background: #FBFBFB;
-        --orange: #E88529;
+        --background: ${(props) => props.theme.colors.background};
+        --orange: ${(props) => props.theme.colors.primary};
+        --text: ${(props) => props.theme.colors.text};
+        --name: ${(props) => props.theme.colors.name};
     }
 
     * {
@@ -28,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body, input, textarea, button {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     button {

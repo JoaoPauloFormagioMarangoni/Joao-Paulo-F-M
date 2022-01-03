@@ -17,7 +17,7 @@ export const AllInfos = styled.header`
     border: 0;
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-    color: #f6f6f6;
+    color: var(--text);
     font-weight: bold;
     transition: all 0.2s;
 
@@ -45,6 +45,7 @@ export const UserImage = styled.div`
   p {
     font-size: 1.1rem;
     position: relative;
+    color: var(--name);
 
     &::after {
       content: '';
@@ -73,14 +74,12 @@ export const TopMenu = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-`
 
-export const DarkMode = styled.div`
-    width: 50px;
+  select {
     border-radius: 999px;
-    border: 1px solid #000;
-
-    display: flex;
-    justify-content: space-between;
-    padding: 4px;
+    padding: 3px 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
 `
