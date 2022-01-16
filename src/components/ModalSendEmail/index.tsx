@@ -4,6 +4,7 @@ import { CgClose } from 'react-icons/cg'
 import { FormEmail } from './styles'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 interface PropsModal {
   modalIsOpen: boolean
@@ -12,9 +13,10 @@ interface PropsModal {
 
 export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
   const [isLoading, setIsLoading] = useState(false)
+  const [isVerified, setIsVerified] = useState(false)
   const { t } = useTranslation()
 
-  async function sendEmail(event : any) {
+  async function sendEmail(event: any) {
     setIsLoading(true)
     event.preventDefault()
 
@@ -36,6 +38,11 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
     setIsLoading(false)
   }
 
+  function handleOnChange(value: any) {
+    console.log('Captcha value:', value)
+    setIsVerified(true)
+  }
+
   return (
     <Modal
       isOpen={modalIsOpen}
@@ -46,28 +53,27 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
       <button type="button" onClick={closeModal} className="react-modal-close">
         <CgClose className="closeModal" />
       </button>
-      <h1>{t("Entre em contato")}</h1>
+      <h1>{t('Entre em contato')}</h1>
       <FormEmail onSubmit={sendEmail}>
-        <input name="name" type="text" placeholder={t("Nome")} required />
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          required
-        />
+        <input name="name" type="text" placeholder={t('Nome')} required />
+        <input name="email" type="text" placeholder="Email" required />
         <textarea
           name="message"
-          placeholder={t("Digite a mensagem aqui")}
+          placeholder={t('Digite a mensagem aqui')}
           required
         ></textarea>
+        <ReCAPTCHA
+          sitekey="6Lf05RgeAAAAAHg4gzkp6752Sq-a7_S1YWDIfwVw"
+          onChange={handleOnChange}
+        />
         <div>
-          <input type="reset" value={String(t("Resetar"))} />
+          <input type="reset" value={String(t('Resetar'))} />
           {isLoading ? (
             <div className="loading">
               <div></div>
             </div>
-          ):(
-            <input type="submit" value={String(t("Enviar"))} />
+          ) : (
+            <input disabled={!isVerified} type="submit" value={String(t('Enviar'))} />
           )}
         </div>
       </FormEmail>
