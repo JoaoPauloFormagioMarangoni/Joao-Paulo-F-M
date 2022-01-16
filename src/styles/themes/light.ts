@@ -1,4 +1,4 @@
-export default {
+const darkModeOff = {
   title: 'light',
   colors: {
     primary: '#E88529',
@@ -6,4 +6,6 @@ export default {
     text: '#f6f6f6',
     name: '#000'
   },
-}
+};
+
+export default darkModeOff;

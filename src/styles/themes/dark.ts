@@ -1,4 +1,4 @@
-export default {
+const darkModeOn = {
   title: 'dark',
   colors: {
     primary: '#b96c25',
@@ -6,4 +6,6 @@ export default {
     text: '#e9e9e9',
     name: '#e9e9e9'
   },
-}
+};
+
+export default darkModeOn;
