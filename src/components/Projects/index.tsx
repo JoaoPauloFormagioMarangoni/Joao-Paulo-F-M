@@ -16,52 +16,56 @@ export function Projects() {
         <a
           href="https://quartodoyoga.vercel.app/home"
           target="_blank"
+          rel="noreferrer"
           title="Quarto do Yoga"
         >
           <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
         </a>
       ),
       title: 'Quarto do Yoga',
-      link: 'https://quartodoyoga.vercel.app/home'
+      link: 'https://quartodoyoga.vercel.app/home',
     },
     {
       image: (
         <a
           href="https://animesOnline.vercel.app"
           target="_blank"
+          rel="noreferrer"
           title="Animes online"
         >
           <img src={projectAnimesOnline} alt={projectAnimesOnline} />
         </a>
       ),
       title: 'Animes online',
-      link: 'https://animesOnline.vercel.app'
+      link: 'https://animesOnline.vercel.app',
     },
     {
       image: (
         <a
           href="https://quartodoyoga.vercel.app/home"
           target="_blank"
+          rel="noreferrer"
           title="Quarto do Yoga"
         >
           <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
         </a>
       ),
       title: 'Quarto do Yoga',
-      link: 'https://quartodoyoga.vercel.app/home'
+      link: 'https://quartodoyoga.vercel.app/home',
     },
     {
       image: (
         <a
           href="https://animesOnline.vercel.app"
           target="_blank"
+          rel="noreferrer"
           title="Animes online"
         >
           <img src={projectAnimesOnline} alt={projectAnimesOnline} />
         </a>
       ),
       title: 'Animes online',
-      link: 'https://animesOnline.vercel.app'
+      link: 'https://animesOnline.vercel.app',
     },
   ]
 
@@ -89,7 +93,9 @@ export function Projects() {
             className={idx === imageIndex ? 'slide activeSlide' : 'slide'}
           >
             {img.image}
-            <a href={img.link} target="_blank">{img.title}</a>
+            <a href={img.link} rel="noreferrer" target="_blank">
+              {img.title}
+            </a>
           </div>
         ))}
       </Slider>

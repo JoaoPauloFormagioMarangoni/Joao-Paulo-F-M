@@ -2,8 +2,7 @@ import Modal from 'react-modal'
 import emailjs from 'emailjs-com'
 import { CgClose } from 'react-icons/cg'
 import { FormEmail } from './styles'
-import { FormEvent, useState } from 'react'
-import { FormProviderProps } from 'react-hook-form'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 interface PropsModal {

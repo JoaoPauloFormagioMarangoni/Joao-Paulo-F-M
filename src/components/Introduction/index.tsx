@@ -32,7 +32,7 @@ export function Introduction({ toggleTheme, openModal }: PropsIntroduction) {
       <TopMenu>
         <Switch 
           onChange={toggleTheme}
-          checked={title == 'dark'}
+          checked={title === 'dark'}
           checkedIcon={false}
           uncheckedIcon={false}
           width={50}
