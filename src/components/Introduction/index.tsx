@@ -10,9 +10,10 @@ import i18n from '../../i18n'
 
 interface PropsIntroduction {
   toggleTheme: () => void
+  openModal: () => void
 }
 
-export function Introduction({ toggleTheme }: PropsIntroduction) {
+export function Introduction({ toggleTheme, openModal }: PropsIntroduction) {
   const { colors, title } = useContext(ThemeContext)
   const { t } = useTranslation()
   const [language, setLanguage] = useState('portuguese')
@@ -54,7 +55,7 @@ export function Introduction({ toggleTheme }: PropsIntroduction) {
         <img src={userImg} alt="Imagem de perfil do github" />
         <p>João Paulo Formagio Marangoni</p>
       </UserImage>
-      <button>{t('Contate-me')}</button>
+      <button onClick={openModal}>{t('Contate-me')}</button>
     </AllInfos>
   )
 }

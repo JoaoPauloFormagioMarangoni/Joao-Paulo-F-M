@@ -27,6 +27,15 @@ export const AllInfos = styled.header`
       transform: scaleY(1.1);
     }
   }
+
+  @media (max-width: 1200px) {
+    height: 75vh;
+    width: 100vw;
+  }
+
+  @media (max-width: 375px) {
+    padding: 20px;
+  }
 `
 
 export const UserImage = styled.div`

@@ -11,31 +11,69 @@ export function Projects() {
   const { t } = useTranslation()
 
   let slides = [
-    <img src="https://picsum.photos/800/300/?random" alt="1" />,
-    <a
-      href="https://quartodoyoga.vercel.app/home"
-      target="_blank"
-      title="Quarto do Yoga"
-    >
-      <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
-    </a>,
-    <a
-      href="https://animesOnline.vercel.app"
-      target="_blank"
-      title="Animes online"
-    >
-      <img src={projectAnimesOnline} alt={projectAnimesOnline} />
-    </a>,
-    <img src="https://picsum.photos/800/301/?random" alt="2" />,
-    <img src="https://picsum.photos/800/302/?random" alt="3" />,
+    {
+      image: (
+        <a
+          href="https://quartodoyoga.vercel.app/home"
+          target="_blank"
+          title="Quarto do Yoga"
+        >
+          <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
+        </a>
+      ),
+      title: 'Quarto do Yoga',
+      link: 'https://quartodoyoga.vercel.app/home'
+    },
+    {
+      image: (
+        <a
+          href="https://animesOnline.vercel.app"
+          target="_blank"
+          title="Animes online"
+        >
+          <img src={projectAnimesOnline} alt={projectAnimesOnline} />
+        </a>
+      ),
+      title: 'Animes online',
+      link: 'https://animesOnline.vercel.app'
+    },
+    {
+      image: (
+        <a
+          href="https://quartodoyoga.vercel.app/home"
+          target="_blank"
+          title="Quarto do Yoga"
+        >
+          <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
+        </a>
+      ),
+      title: 'Quarto do Yoga',
+      link: 'https://quartodoyoga.vercel.app/home'
+    },
+    {
+      image: (
+        <a
+          href="https://animesOnline.vercel.app"
+          target="_blank"
+          title="Animes online"
+        >
+          <img src={projectAnimesOnline} alt={projectAnimesOnline} />
+        </a>
+      ),
+      title: 'Animes online',
+      link: 'https://animesOnline.vercel.app'
+    },
   ]
 
   const [imageIndex, setImageIndex] = useState(0)
 
+  let width: number = window.screen.width
+  console.log(width)
+
   const settings = {
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: width < 630 ? 1 : 3,
     centerMode: true,
     centerPadding: '0',
     beforeChange: (oldIndex: number, newIndex: number) =>
@@ -47,8 +85,12 @@ export function Projects() {
       <h1>{t('Projetos desenvolvidos')}</h1>
       <Slider {...settings} lazyLoad="progressive">
         {slides.map((img, idx) => (
-          <div key={idx} className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
-            {img}
+          <div
+            key={idx}
+            className={idx === imageIndex ? 'slide activeSlide' : 'slide'}
+          >
+            {img.image}
+            <a href={img.link} target="_blank">{img.title}</a>
           </div>
         ))}
       </Slider>
