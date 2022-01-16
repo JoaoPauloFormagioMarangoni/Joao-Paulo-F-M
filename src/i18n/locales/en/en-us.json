@@ -3,6 +3,11 @@
         "Inglês": "English",
         "Português": "Portuguese",
         "Contate-me": "Contact me",
-        "Projetos desenvolvidos": "Developed projects"
+        "Projetos desenvolvidos": "Developed projects",
+        "Nome": "Name",
+        "Digite a mensagem aqui": "Type message here",
+        "Resetar": "Reset",
+        "Enviar": "Send",
+        "Entre em contato": "Contact me"
     }
 }
