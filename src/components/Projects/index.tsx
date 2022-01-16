@@ -68,7 +68,6 @@ export function Projects() {
   const [imageIndex, setImageIndex] = useState(0)
 
   let width: number = window.screen.width
-  console.log(width)
 
   const settings = {
     infinite: true,

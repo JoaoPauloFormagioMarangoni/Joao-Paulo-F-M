@@ -17,13 +17,13 @@ export const FormEmail = styled.form`
     cursor: pointer;
 
     &:focus {
-        outline: 2px solid var(--orange);
+      outline: 2px solid var(--orange);
     }
   }
 
   textarea {
-      resize: none;
-      height: 120px;
+    resize: none;
+    height: 120px;
   }
 
   div {
@@ -31,6 +31,31 @@ export const FormEmail = styled.form`
     width: 100%;
     gap: 10px;
 
+    div.loading {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        border: 4px solid var(--orange);
+        border-right-color: #5e5e5e;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        animation: loading 1s linear infinite;
+
+        @keyframes loading {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
 
     input[type='submit']:hover {
       background-color: #32cd32;
