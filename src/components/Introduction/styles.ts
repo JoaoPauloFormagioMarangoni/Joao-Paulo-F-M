@@ -33,10 +33,6 @@ export const AllInfos = styled.header`
     width: 100vw;
   }
 
-  @media (max-width: 1024px) {
-    height: 90vh;
-  }
-
   @media (max-width: 550px) {
     padding: 20px;
   }
