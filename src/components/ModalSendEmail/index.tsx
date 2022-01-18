@@ -5,6 +5,7 @@ import { FormEmail } from './styles'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { toast, ToastContainer } from 'react-toastify'
 
 interface PropsModal {
   modalIsOpen: boolean
@@ -29,17 +30,35 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
       )
       .then(
         (result) => {
-          alert('Mensagem enviada! 👌')
+          toast.success(t('Mensagem enviada!'), {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 5000,
+            theme: 'dark',
+            closeOnClick: true,
+            closeButton: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          setIsLoading(false)
         },
         (error) => {
-          alert(error.message)
+          toast.error(error.message, {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 5000,
+            theme: 'dark',
+            closeOnClick: true,
+            closeButton: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          setIsLoading(false)
         },
       )
-    setIsLoading(false)
   }
 
   function handleOnChange(value: any) {
-    console.log('Captcha value:', value)
     setIsVerified(true)
   }
 
@@ -73,9 +92,14 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
               <div></div>
             </div>
           ) : (
-            <input disabled={!isVerified} type="submit" value={String(t('Enviar'))} />
+            <input
+              disabled={!isVerified}
+              type="submit"
+              value={String(t('Enviar'))}
+            />
           )}
         </div>
+        <ToastContainer />
       </FormEmail>
     </Modal>
   )

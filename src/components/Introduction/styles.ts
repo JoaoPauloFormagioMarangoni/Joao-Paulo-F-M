@@ -33,7 +33,11 @@ export const AllInfos = styled.header`
     width: 100vw;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 1024px) {
+    height: 90vh;
+  }
+
+  @media (max-width: 550px) {
     padding: 20px;
   }
 `
@@ -74,6 +78,12 @@ export const UserImage = styled.div`
       position: absolute;
       bottom: -2px;
       left: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    p {
+      margin-bottom: 20px;
     }
   }
 `

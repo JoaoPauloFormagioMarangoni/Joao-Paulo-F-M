@@ -58,7 +58,7 @@ export const ProjectsAndLinks = styled.main`
     width: 80vw;
   }
 
-  @media (max-width: 630px) {
+  @media (max-width: 640px) {
     div {
       &.slide {        
         a {

@@ -8,6 +8,7 @@
         "Digite a mensagem aqui": "Type message here",
         "Resetar": "Reset",
         "Enviar": "Send",
-        "Entre em contato": "Contact me"
+        "Entre em contato": "Contact me",
+        "Mensagem enviada!": "Message sent!"
     }
 }

@@ -57,9 +57,13 @@ export const FormEmail = styled.form`
       }
     }
 
-    input[type='submit']:hover {
+    input[type='submit']:not(:disabled):hover {
       background-color: #32cd32;
       color: #fff;
+    }
+
+    input[type='submit']:disabled {
+      cursor: not-allowed;
     }
 
     input[type='reset']:hover {
