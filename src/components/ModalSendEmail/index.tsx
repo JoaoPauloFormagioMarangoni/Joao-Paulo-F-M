@@ -2,7 +2,7 @@ import Modal from 'react-modal'
 import emailjs from 'emailjs-com'
 import { CgClose } from 'react-icons/cg'
 import { FormEmail } from './styles'
-import { FormEvent, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 
