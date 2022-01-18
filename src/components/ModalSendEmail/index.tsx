@@ -2,10 +2,12 @@ import Modal from 'react-modal'
 import emailjs from 'emailjs-com'
 import { CgClose } from 'react-icons/cg'
 import { FormEmail } from './styles'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
+
 import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 interface PropsModal {
   modalIsOpen: boolean
@@ -99,8 +101,8 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
             />
           )}
         </div>
-        <ToastContainer />
       </FormEmail>
+      <ToastContainer />
     </Modal>
   )
 }
