@@ -4,6 +4,7 @@ import { SocialMedia } from '../SocialMedia'
 import { ProjectsAndLinks } from './styles'
 import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.png'
 import projectAnimesOnline from '../../assets/projectAnimesOnline.png'
+import projectCineAraujoCopy from '../../assets/projectCineAraujoCopy.png'
 
 import { useTranslation } from 'react-i18next'
 
@@ -19,7 +20,7 @@ export function Projects() {
           rel="noreferrer"
           title="Quarto do Yoga"
         >
-          <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
+          <img src={projectQuartoDoYoga} alt="Quarto do Yoga" />
         </a>
       ),
       title: 'Quarto do Yoga',
@@ -33,7 +34,7 @@ export function Projects() {
           rel="noreferrer"
           title="Animes online"
         >
-          <img src={projectAnimesOnline} alt={projectAnimesOnline} />
+          <img src={projectAnimesOnline} alt="Animes online" />
         </a>
       ),
       title: 'Animes online',
@@ -42,16 +43,16 @@ export function Projects() {
     {
       image: (
         <a
-          href="https://quartodoyoga.vercel.app/home"
+          href="https://cinearaujo-copy.vercel.app"
           target="_blank"
           rel="noreferrer"
-          title="Quarto do Yoga"
+          title="CineAraujo-Copy"
         >
-          <img src={projectQuartoDoYoga} alt={projectQuartoDoYoga} />
+          <img src={projectCineAraujoCopy} alt="CineAraujo-Copy" />
         </a>
       ),
-      title: 'Quarto do Yoga',
-      link: 'https://quartodoyoga.vercel.app/home',
+      title: 'CineAraujo-Copy',
+      link: 'https://cinearaujo-copy.vercel.app',
     },
     {
       image: (
@@ -61,7 +62,7 @@ export function Projects() {
           rel="noreferrer"
           title="Animes online"
         >
-          <img src={projectAnimesOnline} alt={projectAnimesOnline} />
+          <img src={projectAnimesOnline} alt="Animes online" />
         </a>
       ),
       title: 'Animes online',
