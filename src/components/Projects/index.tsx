@@ -2,9 +2,11 @@ import { useState } from 'react'
 import Slider from 'react-slick'
 import { SocialMedia } from '../SocialMedia'
 import { ProjectsAndLinks } from './styles'
+
 import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.png'
 import projectAnimesOnline from '../../assets/projectAnimesOnline.png'
 import projectCineAraujoCopy from '../../assets/projectCineAraujoCopy.png'
+import projectShopHome from '../../assets/projectShopHome.png'
 
 import { useTranslation } from 'react-i18next'
 
@@ -62,7 +64,7 @@ export function Projects() {
           rel="noreferrer"
           title="Shop Home"
         >
-          <img src={projectAnimesOnline} alt="Shop Home" />
+          <img src={projectShopHome} alt="Shop Home" />
         </a>
       ),
       title: 'Shop Home',
