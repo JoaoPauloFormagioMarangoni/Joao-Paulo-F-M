@@ -57,16 +57,16 @@ export function Projects() {
     {
       image: (
         <a
-          href="https://animesOnline.vercel.app"
+          href="https://shophome.vercel.app"
           target="_blank"
           rel="noreferrer"
-          title="Animes online"
+          title="Shop Home"
         >
-          <img src={projectAnimesOnline} alt="Animes online" />
+          <img src={projectAnimesOnline} alt="Shop Home" />
         </a>
       ),
-      title: 'Animes online',
-      link: 'https://animesOnline.vercel.app',
+      title: 'Shop Home',
+      link: 'https://shophome.vercel.app',
     },
   ]
 
