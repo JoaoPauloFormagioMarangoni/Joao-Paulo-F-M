@@ -3,10 +3,10 @@ import Slider from 'react-slick'
 import { SocialMedia } from '../SocialMedia'
 import { ProjectsAndLinks } from './styles'
 
-import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.png'
-import projectAnimesOnline from '../../assets/projectAnimesOnline.png'
-import projectCineAraujoCopy from '../../assets/projectCineAraujoCopy.png'
-import projectShopHome from '../../assets/projectShopHome.png'
+import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.webp'
+import projectAnimesOnline from '../../assets/projectAnimesOnline.webp'
+import projectCineAraujoCopy from '../../assets/projectCineAraujoCopy.webp'
+import projectShopHome from '../../assets/projectShopHome.webp'
 
 import { useTranslation } from 'react-i18next'
 
