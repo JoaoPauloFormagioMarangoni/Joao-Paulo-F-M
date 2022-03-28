@@ -1,5 +1,5 @@
 import { AllInfos, TopMenu, UserImage } from './styles'
-import userImg from '../../assets/userImage.jpeg'
+import userImg from '../../assets/userImage.webp'
 import { useContext, useState } from 'react'
 
 import Switch from 'react-switch'
