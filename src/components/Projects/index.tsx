@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import { SocialMedia } from '../SocialMedia'
 import { ProjectsAndLinks } from './styles'
 
+import projectMoviesInfo from '../../assets/projectMoviesInfo.webp'
 import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.webp'
 import projectAnimesOnline from '../../assets/projectAnimesOnline.webp'
 import projectCineAraujoCopy from '../../assets/projectCineAraujoCopy.webp'
@@ -14,6 +15,20 @@ export function Projects() {
   const { t } = useTranslation()
 
   let slides = [
+    {
+      image: (
+        <a
+          href="https://moviesinfo.vercel.app/home"
+          target="_blank"
+          rel="noreferrer"
+          title="Movies.Info"
+        >
+          <img src={projectMoviesInfo} alt="Movies.Info" />
+        </a>
+      ),
+      title: 'Movies.Info',
+      link: 'https://moviesinfo.vercel.app/home',
+    },
     {
       image: (
         <a
