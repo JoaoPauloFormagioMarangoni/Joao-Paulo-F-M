@@ -37,7 +37,7 @@ export const AllInfos = styled.header`
     padding: 20px;
   }
 
-  @media (min-width: 600px) and (orientation: landscape) {
+  @media (min-width: 600px) and (max-width: 1000px) and (orientation: landscape) {
     height: 95vh;
     padding: 20px;
   }
@@ -88,7 +88,7 @@ export const UserImage = styled.div`
     }
   }
 
-  @media (min-width: 600px) and (orientation: landscape) {
+  @media (min-width: 600px)  and (max-width: 1000px) and (orientation: landscape) {
     display: flex;
     align-items: center;
 

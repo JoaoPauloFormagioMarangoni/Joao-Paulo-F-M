@@ -68,7 +68,7 @@ export const ProjectsAndLinks = styled.main`
     }
   }
 
-  @media (min-width: 600px) and (orientation: landscape) {
+  @media (min-width: 600px) and (max-width: 1000px) and (orientation: landscape) {
     height: auto;
     margin-bottom: 10px;
   }
