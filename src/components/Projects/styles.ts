@@ -29,6 +29,14 @@ export const ProjectsAndLinks = styled.main`
         object-fit: cover;
         margin: 0 auto;
         border-radius: 10px;
+
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          border: 2px solid orange;
+          box-shadow: 2px 2px 5px orange, 2px -2px 5px orange,
+            -2px 2px 5px orange, -2px -2px 5px orange;
+        }
       }
 
       a {
@@ -40,7 +48,7 @@ export const ProjectsAndLinks = styled.main`
         font-size: 1.5rem;
         text-shadow: 2px 2px 4px #000;
 
-        transition: filter 0.2s;
+        transition: all 0.2s;
 
         &:hover {
           filter: brightness(0.9);
@@ -60,7 +68,7 @@ export const ProjectsAndLinks = styled.main`
 
   @media (max-width: 640px) {
     div {
-      &.slide {        
+      &.slide {
         a {
           font-size: 1.2rem;
         }
