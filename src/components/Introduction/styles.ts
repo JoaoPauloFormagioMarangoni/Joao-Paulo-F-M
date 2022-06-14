@@ -36,6 +36,11 @@ export const AllInfos = styled.header`
   @media (max-width: 550px) {
     padding: 20px;
   }
+
+  @media (min-width: 600px) and (orientation: landscape) {
+    height: 95vh;
+    padding: 20px;
+  }
 `
 
 export const UserImage = styled.div`
@@ -80,6 +85,16 @@ export const UserImage = styled.div`
   @media (max-width: 1024px) {
     p {
       margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 600px) and (orientation: landscape) {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 170px;
+      margin: 0 25px 0 0;
     }
   }
 `
