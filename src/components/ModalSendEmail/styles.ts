@@ -70,5 +70,12 @@ export const FormEmail = styled.form`
       background-color: #ff4040;
       color: #fff;
     }
+
+  }
+  
+  @media (min-width: 600px) and (max-width: 1000px) and (orientation: landscape) {
+    textarea {
+      height: 90px;
+    }
   }
 `

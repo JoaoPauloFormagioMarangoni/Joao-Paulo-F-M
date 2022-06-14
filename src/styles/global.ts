@@ -93,4 +93,12 @@ export const GlobalStyle = createGlobalStyle`
             filter: brightness(0.9);
         }
     }
+
+    @media (min-width: 600px) and (max-width: 1000px) and (orientation: landscape) {
+        .react-modal-content {
+            padding: 1rem;
+            margin: 0;
+            height: 100%;
+        }
+    }
 `

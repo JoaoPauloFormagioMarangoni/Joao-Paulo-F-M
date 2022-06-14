@@ -76,8 +76,10 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
       </button>
       <h1>{t('Entre em contato')}</h1>
       <FormEmail onSubmit={sendEmail}>
-        <input name="name" type="text" placeholder={t('Nome')} required />
-        <input name="email" type="text" placeholder="Email" required />
+        <div>
+          <input name="name" type="text" placeholder={t('Nome')} required />
+          <input name="email" type="text" placeholder="Email" required />
+        </div>
         <textarea
           name="message"
           placeholder={t('Digite a mensagem aqui')}
