@@ -9,6 +9,10 @@
         "Resetar": "Reset",
         "Enviar": "Send",
         "Entre em contato": "Contact me",
-        "Mensagem enviada!": "Message sent!"
+        "Mensagem enviada!": "Message sent!",
+        "Sobre": "About",
+        "Projetos": "Projects",
+        "Olá, eu me chamo João Paulo, tenho 22 anos e moro no Brasil, atualmente estou cursando Ciência da Computação na EEP (Escola de Engenharia de Piracicaba), comecei em 2018 e estou terminando em 2022.": "Hello, my name is João Paulo, I'm 22 years old and I live in Brazil, I'm currently studying Computer Science at EEP (Escola de Engenharia de Piracicaba), I started in 2018 and I'm finishing in 2022.",
+        "Atualmente não estou empregado, mas pretendo trabalhar em uma área voltada ao desenvolvimento web, especificamente no Front-end utilizando o ReactJS e o NextJS.": "I'm not currently employed, but i intend to work in an area focused on web development, specifically in Front-end using ReactJS and NextJS."
     }
 }

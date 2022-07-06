@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         --background: ${(props) => props.theme.colors.background};
         --orange: ${(props) => props.theme.colors.primary};
         --text: ${(props) => props.theme.colors.text};
-        --name: ${(props) => props.theme.colors.name};
+        --blackAndWhite: ${(props) => props.theme.colors.blackAndWhite};
     }
 
     * {
@@ -22,6 +22,8 @@ export const GlobalStyle = createGlobalStyle`
       @media (max-width: 720px) {
           font-size: 87.5%; // 14px
       }
+
+      scroll-behavior: smooth;
     }
 
     body {
@@ -67,7 +69,7 @@ export const GlobalStyle = createGlobalStyle`
       z-index: 999999;
 
       h1 {
-          color: var(--name);
+          color: var(--blackAndWhite);
           margin-bottom: 15px;
       }
     }
@@ -85,7 +87,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 4px;
         font-size: 20px;
 
-        color: var(--name);
+        color: var(--blackAndWhite);
 
         transition: filter 0.2s;
 

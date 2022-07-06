@@ -1,61 +1,36 @@
-import { AllInfos, TopMenu, UserImage } from './styles'
-import userImg from '../../assets/userImage.webp'
-import { useContext, useState } from 'react'
-
-import Switch from 'react-switch'
-import { ThemeContext } from 'styled-components'
+import { AllInfos, UserStyle } from './styles'
+import userImg from '../../assets/user.png'
 
 import { useTranslation } from 'react-i18next'
-import i18n from '../../i18n'
+import codeBackground from '../../assets/codeBackground.jpg'
+
 
 interface PropsIntroduction {
-  toggleTheme: () => void
   openModal: () => void
 }
 
-export function Introduction({ toggleTheme, openModal }: PropsIntroduction) {
-  const { colors, title } = useContext(ThemeContext)
+export function Introduction({ openModal }: PropsIntroduction) {
   const { t } = useTranslation()
-  const [language, setLanguage] = useState('portuguese')
-
-  function handleChangeLanguage(event: any) {
-    setLanguage(event.target.value)
-    if (event.target.value === 'portuguese') {
-      i18n.changeLanguage('pt-BR')
-    } else {
-      i18n.changeLanguage('en-US')
-    }
-  }
 
   return (
-    <AllInfos>
-      <TopMenu>
-        <Switch 
-          onChange={toggleTheme}
-          checked={title === 'dark'}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          width={50}
-          height={20}
-          handleDiameter={10}
-          offColor={colors.primary}
-          onColor={colors.primary}
-        />
-        <select
-          name="language"
-          id="language"
-          value={language}
-          onChange={handleChangeLanguage}
-        >
-          <option value="english">{t('Inglês')}</option>
-          <option value="portuguese">{t('Português')}</option>
-        </select>
-      </TopMenu>
-      <UserImage>
-        <img src={userImg} alt="Imagem de perfil do github" />
+    <AllInfos id="home">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>
+          <img src={userImg} alt="Imagem de perfil" />
+        </span>
+      </div>
+      <UserStyle>
         <p>João Paulo Formagio Marangoni</p>
-      </UserImage>
-      <button onClick={openModal}>{t('Contate-me')}</button>
+        <button onClick={openModal}>{t('Contate-me')}</button>
+      </UserStyle>
     </AllInfos>
   )
 }

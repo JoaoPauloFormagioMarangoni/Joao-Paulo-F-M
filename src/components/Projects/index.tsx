@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Slider from 'react-slick'
-import { SocialMedia } from '../SocialMedia'
 import { ProjectsAndLinks } from './styles'
 
 import projectMoviesInfo from '../../assets/projectMoviesInfo.webp'
@@ -96,13 +95,16 @@ export function Projects() {
     speed: 300,
     slidesToShow: width < 630 ? 1 : 3,
     centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
     centerPadding: '0',
     beforeChange: (oldIndex: number, newIndex: number) =>
       setImageIndex(newIndex),
   }
 
   return (
-    <ProjectsAndLinks>
+    <ProjectsAndLinks id='projects'>
       <h1>{t('Projetos desenvolvidos')}</h1>
       <Slider {...settings} lazyLoad="progressive">
         {slides.map((img, idx) => (
@@ -117,7 +119,6 @@ export function Projects() {
           </div>
         ))}
       </Slider>
-      <SocialMedia />
     </ProjectsAndLinks>
   )
 }

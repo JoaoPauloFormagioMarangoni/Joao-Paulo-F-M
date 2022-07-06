@@ -1,5 +1,6 @@
 import { SocialMediaStylization } from './styles'
 import { BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs'
+import { FaWhatsappSquare } from 'react-icons/fa'
 
 export function SocialMedia() {
   return (
@@ -9,21 +10,32 @@ export function SocialMedia() {
         target="_blank"
         rel="noreferrer"
       >
-        <BsLinkedin />
+        <BsLinkedin className="icon" />
+        <span>Linkedin</span>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
       </a>
       <a
         href="https://github.com/JoaoPauloFormagioMarangoni"
         target="_blank"
         rel="noreferrer"
       >
-        <BsGithub />
+        <BsGithub className="icon" />
+        <span>Github</span>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
       </a>
       <a
         href="https://wa.me/5519988442536?text=Olá%20João%20Paulo"
         target="_blank"
         rel="noreferrer"
       >
-        <BsWhatsapp />
+        <FaWhatsappSquare className="icon" />
+        <span>WhatsApp</span>
       </a>
     </SocialMediaStylization>
   )
