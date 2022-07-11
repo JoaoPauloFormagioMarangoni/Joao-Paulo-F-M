@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body, input, textarea, button {
         font-family: 'Poppins', sans-serif;
+        font-display: swap;
     }
 
     button {
