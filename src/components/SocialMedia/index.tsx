@@ -1,5 +1,5 @@
 import { SocialMediaStylization } from './styles'
-import { BsLinkedin, BsGithub, BsWhatsapp } from 'react-icons/bs'
+import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import { FaWhatsappSquare } from 'react-icons/fa'
 
 export function SocialMedia() {

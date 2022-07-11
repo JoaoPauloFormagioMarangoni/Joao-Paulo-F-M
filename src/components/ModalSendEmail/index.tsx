@@ -32,6 +32,7 @@ export function ModalSendEmail({ modalIsOpen, closeModal }: PropsModal) {
       )
       .then(
         (result) => {
+          event.target.reset()
           toast.success(t('Mensagem enviada!'), {
             position: toast.POSITION.TOP_RIGHT,
             autoClose: 5000,

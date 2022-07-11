@@ -1,8 +1,7 @@
 import { AllInfos, UserStyle } from './styles'
-import userImg from '../../assets/user.png'
+import userImg from '../../assets/user.webp'
 
 import { useTranslation } from 'react-i18next'
-import codeBackground from '../../assets/codeBackground.jpg'
 
 
 interface PropsIntroduction {

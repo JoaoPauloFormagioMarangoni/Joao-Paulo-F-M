@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import codeBackground from '../../assets/codeBackground.jpg'
+import codeBackground from '../../assets/codeBackground.webp'
 
 export const AllInfos = styled.section`
   display: flex;
