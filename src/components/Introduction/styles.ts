@@ -11,7 +11,7 @@ export const AllInfos = styled.section`
 
   padding: 110px 0 30px;
 
-  div:first-child {
+  > div:first-child {
     border-radius: 50%;
     width: 360px;
     height: 360px;
@@ -177,7 +177,7 @@ export const AllInfos = styled.section`
   @media (max-width: 880px) {
     flex-direction: column;
 
-    div:first-child {
+    > div:first-child {
       margin-bottom: 20px;
       width: 300px;
       height: 300px;
@@ -265,7 +265,7 @@ export const AllInfos = styled.section`
   }
 
   @media (max-width: 367px) {
-    div:first-child {
+    > div:first-child {
       width: 200px;
       height: 200px;
 
@@ -290,7 +290,9 @@ export const AllInfos = styled.section`
 `
 
 export const UserStyle = styled.div`
-  p {
+  width: 324px;
+
+  > div {
     font-size: 1.1rem;
     position: relative;
     color: #e9e9e9;
@@ -307,6 +309,7 @@ export const UserStyle = styled.div`
       position: absolute;
       top: -2px;
       right: 0;
+      animation: flicker 1.5s infinite alternate;
     }
 
     &::before {
@@ -317,6 +320,27 @@ export const UserStyle = styled.div`
       position: absolute;
       bottom: -2px;
       left: 0;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0%,
+      18%,
+      22%,
+      25%,
+      53%,
+      57%,
+      100% {
+        box-shadow: 0 0 2px #fff, 0 0 10px var(--orange), 0 0 20px var(--orange);
+        opacity: 1;
+      }
+
+      20%,
+      24%,
+      55% {
+        box-shadow: none;
+        opacity: 0.5;
+      }
     }
   }
 

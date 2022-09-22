@@ -1,8 +1,9 @@
 import { AllInfos, UserStyle } from './styles'
+import Typewriter from 'typewriter-effect'
+
 import userImg from '../../assets/user.webp'
 
 import { useTranslation } from 'react-i18next'
-
 
 interface PropsIntroduction {
   openModal: () => void
@@ -27,7 +28,13 @@ export function Introduction({ openModal }: PropsIntroduction) {
         </span>
       </div>
       <UserStyle>
-        <p>João Paulo Formagio Marangoni</p>
+        <Typewriter
+          options={{
+            strings: ['João Paulo Formagio Marangoni'],
+            autoStart: true,
+            loop: true,
+          }}
+        />
         <button onClick={openModal}>{t('Contate-me')}</button>
       </UserStyle>
     </AllInfos>

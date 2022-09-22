@@ -63,7 +63,9 @@ export const Container = styled.header`
         left: 100%;
         top: 0;
         background-color: var(--orange);
-        transition: all 0.2s;
+        transition: all 0.4s ease;
+        animation: flicker 1.5s infinite alternate;
+        box-shadow: 0 0 2px #fff, 0 0 3px var(--orange), 0 0 4px var(--orange);
       }
       &::before {
         content: '';
@@ -73,7 +75,9 @@ export const Container = styled.header`
         left: 0;
         bottom: 0;
         background-color: var(--orange);
-        transition: all 0.2s;
+        transition: all 0.4s ease;
+        animation: flicker 1.5s infinite alternate;
+        box-shadow: 0 0 2px #fff, 0 0 3px var(--orange), 0 0 4px var(--orange);
       }
 
       &:hover {
@@ -85,6 +89,26 @@ export const Container = styled.header`
         &::before {
           content: '';
           width: 100%;
+        }
+      }
+
+      @keyframes flicker {
+        0%,
+        18%,
+        22%,
+        25%,
+        53%,
+        57%,
+        100% {
+          box-shadow: 0 0 2px #fff, 0 0 3px var(--orange), 0 0 4px var(--orange);
+          opacity: 1;
+        }
+
+        20%,
+        24%,
+        55% {
+          box-shadow: none;
+          opacity: 0.5;
         }
       }
     }
