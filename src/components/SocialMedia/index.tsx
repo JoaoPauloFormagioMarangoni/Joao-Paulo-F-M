@@ -1,5 +1,6 @@
 import { SocialMediaStylization } from './styles'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
+import { AiOutlineFileText } from 'react-icons/ai'
 import { FaWhatsappSquare } from 'react-icons/fa'
 
 export function SocialMedia() {
@@ -24,6 +25,18 @@ export function SocialMedia() {
       >
         <BsGithub className="icon" />
         <span>Github</span>
+        <div>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+      <a
+        href={require('../../assets/Joao_Paulo_F_Marangoni.pdf')}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <AiOutlineFileText className="icon" />
+        <span>Currículo</span>
         <div>
           <span></span>
           <span></span>
