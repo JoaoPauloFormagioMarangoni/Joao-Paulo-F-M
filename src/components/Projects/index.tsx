@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import Slider from 'react-slick'
-import { ProjectsAndLinks } from './styles'
+import { useState } from "react";
+import Slider from "react-slick";
+import { ProjectsAndLinks } from "./styles";
 
-import projectMoviesInfo from '../../assets/projectMoviesInfo.webp'
-import projectQuartoDoYoga from '../../assets/projectQuartoDoYoga.webp'
-import projectAnimesOnline from '../../assets/projectAnimesOnline.webp'
-import projectCineAraujoCopy from '../../assets/projectCineAraujoCopy.webp'
-import projectShopHome from '../../assets/projectShopHome.webp'
+import projectMoviesInfo from "../../assets/projectMoviesInfo.webp";
+import projectQuartoDoYoga from "../../assets/projectQuartoDoYoga.webp";
+import projectAnimesOnline from "../../assets/projectAnimesOnline.webp";
+import projectCineAraujoCopy from "../../assets/projectCineAraujoCopy.webp";
+import projectShopHome from "../../assets/projectShopHome.webp";
 
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
 export function Projects() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   let slides = [
     {
@@ -25,8 +25,8 @@ export function Projects() {
           <img src={projectMoviesInfo} alt="Movies.Info" />
         </a>
       ),
-      title: 'Movies.Info',
-      link: 'https://moviesinfo.vercel.app/home',
+      title: "Movies.Info",
+      link: "https://moviesinfo.vercel.app/home",
     },
     {
       image: (
@@ -39,8 +39,8 @@ export function Projects() {
           <img src={projectQuartoDoYoga} alt="Quarto do Yoga" />
         </a>
       ),
-      title: 'Quarto do Yoga',
-      link: 'https://quartodoyoga.vercel.app/home',
+      title: "Quarto do Yoga",
+      link: "https://quartodoyoga.vercel.app/home",
     },
     {
       image: (
@@ -53,8 +53,8 @@ export function Projects() {
           <img src={projectAnimesOnline} alt="Animes online" />
         </a>
       ),
-      title: 'Animes online',
-      link: 'https://animesOnline.vercel.app',
+      title: "Animes online",
+      link: "https://animesOnline.vercel.app",
     },
     {
       image: (
@@ -67,8 +67,8 @@ export function Projects() {
           <img src={projectCineAraujoCopy} alt="CineAraujo-Copy" />
         </a>
       ),
-      title: 'CineAraujo-Copy',
-      link: 'https://cinearaujo-copy.vercel.app',
+      title: "CineAraujo-Copy",
+      link: "https://cinearaujo-copy.vercel.app",
     },
     {
       image: (
@@ -81,14 +81,14 @@ export function Projects() {
           <img src={projectShopHome} alt="Shop Home" />
         </a>
       ),
-      title: 'Shop Home',
-      link: 'https://shophome.vercel.app',
+      title: "Shop Home",
+      link: "https://shophome.vercel.app",
     },
-  ]
+  ];
 
-  const [imageIndex, setImageIndex] = useState(0)
+  const [imageIndex, setImageIndex] = useState(0);
 
-  let width: number = window.screen.width
+  let width: number = window.screen.width;
 
   const settings = {
     infinite: true,
@@ -98,19 +98,19 @@ export function Projects() {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
-    centerPadding: '0',
+    centerPadding: "0",
     beforeChange: (oldIndex: number, newIndex: number) =>
       setImageIndex(newIndex),
-  }
+  };
 
   return (
-    <ProjectsAndLinks id='projects'>
-      <h1>{t('Projetos desenvolvidos')}</h1>
+    <ProjectsAndLinks id="projects">
+      <h1>{t("Projetos desenvolvidos para aprendizagem")}</h1>
       <Slider {...settings} lazyLoad="progressive">
         {slides.map((img, idx) => (
           <div
             key={idx}
-            className={idx === imageIndex ? 'slide activeSlide' : 'slide'}
+            className={idx === imageIndex ? "slide activeSlide" : "slide"}
           >
             {img.image}
             <a href={img.link} rel="noreferrer" target="_blank">
@@ -120,5 +120,5 @@ export function Projects() {
         ))}
       </Slider>
     </ProjectsAndLinks>
-  )
+  );
 }
